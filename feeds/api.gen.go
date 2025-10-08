@@ -371,7 +371,7 @@ func NewCreateFeedDocumentRequestWithBody(endpoint string, contentType string, b
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/feeds/2020-09-04/documents")
+	basePath := fmt.Sprintf("/feeds/2021-06-30/documents")
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -406,7 +406,7 @@ func NewGetFeedDocumentRequest(endpoint string, feedDocumentId string) (*http.Re
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/feeds/2020-09-04/documents/%s", pathParam0)
+	basePath := fmt.Sprintf("/feeds/2021-06-30/documents/%s", pathParam0)
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -433,7 +433,7 @@ func NewGetFeedsRequest(endpoint string, params *GetFeedsParams) (*http.Request,
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/feeds/2020-09-04/feeds")
+	basePath := fmt.Sprintf("/feeds/2021-06-30/feeds")
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -446,7 +446,6 @@ func NewGetFeedsRequest(endpoint string, params *GetFeedsParams) (*http.Request,
 	queryValues := queryUrl.Query()
 
 	if params.FeedTypes != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "feedTypes", *params.FeedTypes); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -458,11 +457,9 @@ func NewGetFeedsRequest(endpoint string, params *GetFeedsParams) (*http.Request,
 				}
 			}
 		}
-
 	}
 
 	if params.MarketplaceIds != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "marketplaceIds", *params.MarketplaceIds); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -474,11 +471,9 @@ func NewGetFeedsRequest(endpoint string, params *GetFeedsParams) (*http.Request,
 				}
 			}
 		}
-
 	}
 
 	if params.PageSize != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "pageSize", *params.PageSize); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -490,11 +485,9 @@ func NewGetFeedsRequest(endpoint string, params *GetFeedsParams) (*http.Request,
 				}
 			}
 		}
-
 	}
 
 	if params.ProcessingStatuses != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "processingStatuses", *params.ProcessingStatuses); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -506,11 +499,9 @@ func NewGetFeedsRequest(endpoint string, params *GetFeedsParams) (*http.Request,
 				}
 			}
 		}
-
 	}
 
 	if params.CreatedSince != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "createdSince", *params.CreatedSince); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -522,11 +513,9 @@ func NewGetFeedsRequest(endpoint string, params *GetFeedsParams) (*http.Request,
 				}
 			}
 		}
-
 	}
 
 	if params.CreatedUntil != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "createdUntil", *params.CreatedUntil); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -538,11 +527,9 @@ func NewGetFeedsRequest(endpoint string, params *GetFeedsParams) (*http.Request,
 				}
 			}
 		}
-
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "nextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -554,7 +541,6 @@ func NewGetFeedsRequest(endpoint string, params *GetFeedsParams) (*http.Request,
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -587,7 +573,7 @@ func NewCreateFeedRequestWithBody(endpoint string, contentType string, body io.R
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/feeds/2020-09-04/feeds")
+	basePath := fmt.Sprintf("/feeds/2021-06-30/feeds")
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -622,7 +608,7 @@ func NewCancelFeedRequest(endpoint string, feedId string) (*http.Request, error)
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/feeds/2020-09-04/feeds/%s", pathParam0)
+	basePath := fmt.Sprintf("/feeds/2021-06-30/feeds/%s", pathParam0)
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -656,7 +642,7 @@ func NewGetFeedRequest(endpoint string, feedId string) (*http.Request, error) {
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/feeds/2020-09-04/feeds/%s", pathParam0)
+	basePath := fmt.Sprintf("/feeds/2021-06-30/feeds/%s", pathParam0)
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}

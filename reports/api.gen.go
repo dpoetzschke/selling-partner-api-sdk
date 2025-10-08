@@ -125,7 +125,7 @@ func WithResponseAfter(fn ResponseAfterFn) ClientOption {
 // The interface specification for the client above.
 type ClientInterface interface {
 	// GetReportDocument request
-	GetReportDocument(ctx context.Context, reportDocumentId string) (*http.Response, error)
+	GetReportDocument(ctx context.Context, reportDocumentId string, args ...string) (*http.Response, error)
 
 	// GetReports request
 	GetReports(ctx context.Context, params *GetReportsParams) (*http.Response, error)
@@ -156,8 +156,8 @@ type ClientInterface interface {
 	GetReportSchedule(ctx context.Context, reportScheduleId string) (*http.Response, error)
 }
 
-func (c *Client) GetReportDocument(ctx context.Context, reportDocumentId string) (*http.Response, error) {
-	req, err := NewGetReportDocumentRequest(c.Endpoint, reportDocumentId)
+func (c *Client) GetReportDocument(ctx context.Context, reportDocumentId string, args ...string) (*http.Response, error) {
+	req, err := NewGetReportDocumentRequest(c.Endpoint, reportDocumentId, args...)
 	if err != nil {
 		return nil, err
 	}
@@ -448,7 +448,7 @@ func (c *Client) GetReportSchedule(ctx context.Context, reportScheduleId string)
 }
 
 // NewGetReportDocumentRequest generates requests for GetReportDocument
-func NewGetReportDocumentRequest(endpoint string, reportDocumentId string) (*http.Request, error) {
+func NewGetReportDocumentRequest(endpoint string, reportDocumentId string, args ...string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -463,7 +463,7 @@ func NewGetReportDocumentRequest(endpoint string, reportDocumentId string) (*htt
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/reports/2020-09-04/documents/%s", pathParam0)
+	basePath := fmt.Sprintf("/reports/2021-06-30/documents/%s", pathParam0)
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -489,8 +489,7 @@ func NewGetReportsRequest(endpoint string, params *GetReportsParams) (*http.Requ
 	if err != nil {
 		return nil, err
 	}
-
-	basePath := fmt.Sprintf("/reports/2020-09-04/reports")
+	basePath := fmt.Sprintf("/reports/2021-06-30/reports")
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -503,7 +502,6 @@ func NewGetReportsRequest(endpoint string, params *GetReportsParams) (*http.Requ
 	queryValues := queryUrl.Query()
 
 	if params.ReportTypes != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "reportTypes", *params.ReportTypes); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -515,11 +513,9 @@ func NewGetReportsRequest(endpoint string, params *GetReportsParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	if params.ProcessingStatuses != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "processingStatuses", *params.ProcessingStatuses); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -531,11 +527,9 @@ func NewGetReportsRequest(endpoint string, params *GetReportsParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	if params.MarketplaceIds != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "marketplaceIds", *params.MarketplaceIds); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -547,11 +541,9 @@ func NewGetReportsRequest(endpoint string, params *GetReportsParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	if params.PageSize != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "pageSize", *params.PageSize); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -563,11 +555,9 @@ func NewGetReportsRequest(endpoint string, params *GetReportsParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	if params.CreatedSince != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "createdSince", *params.CreatedSince); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -579,11 +569,9 @@ func NewGetReportsRequest(endpoint string, params *GetReportsParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	if params.CreatedUntil != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "createdUntil", *params.CreatedUntil); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -595,11 +583,9 @@ func NewGetReportsRequest(endpoint string, params *GetReportsParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "nextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -611,7 +597,6 @@ func NewGetReportsRequest(endpoint string, params *GetReportsParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -644,7 +629,7 @@ func NewCreateReportRequestWithBody(endpoint string, contentType string, body io
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/reports/2020-09-04/reports")
+	basePath := fmt.Sprintf("/reports/2021-06-30/reports")
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -679,7 +664,7 @@ func NewCancelReportRequest(endpoint string, reportId string) (*http.Request, er
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/reports/2020-09-04/reports/%s", pathParam0)
+	basePath := fmt.Sprintf("/reports/2021-06-30/reports/%s", pathParam0)
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -713,7 +698,7 @@ func NewGetReportRequest(endpoint string, reportId string) (*http.Request, error
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/reports/2020-09-04/reports/%s", pathParam0)
+	basePath := fmt.Sprintf("/reports/2021-06-30/reports/%s", pathParam0)
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -740,7 +725,7 @@ func NewGetReportSchedulesRequest(endpoint string, params *GetReportSchedulesPar
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/reports/2020-09-04/schedules")
+	basePath := fmt.Sprintf("/reports/2021-06-30/schedules")
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -794,7 +779,7 @@ func NewCreateReportScheduleRequestWithBody(endpoint string, contentType string,
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/reports/2020-09-04/schedules")
+	basePath := fmt.Sprintf("/reports/2021-06-30/schedules")
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -829,7 +814,7 @@ func NewCancelReportScheduleRequest(endpoint string, reportScheduleId string) (*
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/reports/2020-09-04/schedules/%s", pathParam0)
+	basePath := fmt.Sprintf("/reports/2021-06-30/schedules/%s", pathParam0)
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -863,7 +848,7 @@ func NewGetReportScheduleRequest(endpoint string, reportScheduleId string) (*htt
 		return nil, err
 	}
 
-	basePath := fmt.Sprintf("/reports/2020-09-04/schedules/%s", pathParam0)
+	basePath := fmt.Sprintf("/reports/2021-06-30/schedules/%s", pathParam0)
 	if basePath[0] == '/' {
 		basePath = basePath[1:]
 	}
@@ -911,7 +896,7 @@ func WithBaseURL(baseURL string) ClientOption {
 // ClientWithResponsesInterface is the interface specification for the client with responses above.
 type ClientWithResponsesInterface interface {
 	// GetReportDocument request
-	GetReportDocumentWithResponse(ctx context.Context, reportDocumentId string) (*GetReportDocumentResp, error)
+	GetReportDocumentWithResponse(ctx context.Context, reportDocumentId string, params ...string) (*GetReportDocumentResp, error)
 
 	// GetReports request
 	GetReportsWithResponse(ctx context.Context, params *GetReportsParams) (*GetReportsResp, error)
@@ -1141,8 +1126,8 @@ func (r GetReportScheduleResp) StatusCode() int {
 }
 
 // GetReportDocumentWithResponse request returning *GetReportDocumentResponse
-func (c *ClientWithResponses) GetReportDocumentWithResponse(ctx context.Context, reportDocumentId string) (*GetReportDocumentResp, error) {
-	rsp, err := c.GetReportDocument(ctx, reportDocumentId)
+func (c *ClientWithResponses) GetReportDocumentWithResponse(ctx context.Context, reportDocumentId string, args ...string) (*GetReportDocumentResp, error) {
+	rsp, err := c.GetReportDocument(ctx, reportDocumentId, args...)
 	if err != nil {
 		return nil, err
 	}

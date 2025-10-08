@@ -284,7 +284,6 @@ func NewListCatalogCategoriesRequest(endpoint string, params *ListCatalogCategor
 	}
 
 	if params.ASIN != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "ASIN", *params.ASIN); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -296,11 +295,9 @@ func NewListCatalogCategoriesRequest(endpoint string, params *ListCatalogCategor
 				}
 			}
 		}
-
 	}
 
 	if params.SellerSKU != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "SellerSKU", *params.SellerSKU); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -312,7 +309,6 @@ func NewListCatalogCategoriesRequest(endpoint string, params *ListCatalogCategor
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -406,7 +402,6 @@ func NewListCatalogItemsRequest(endpoint string, params *ListCatalogItemsParams)
 	}
 
 	if params.Query != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "Query", *params.Query); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -418,11 +413,9 @@ func NewListCatalogItemsRequest(endpoint string, params *ListCatalogItemsParams)
 				}
 			}
 		}
-
 	}
 
 	if params.QueryContextId != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "QueryContextId", *params.QueryContextId); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -434,11 +427,9 @@ func NewListCatalogItemsRequest(endpoint string, params *ListCatalogItemsParams)
 				}
 			}
 		}
-
 	}
 
 	if params.SellerSKU != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "SellerSKU", *params.SellerSKU); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -450,11 +441,9 @@ func NewListCatalogItemsRequest(endpoint string, params *ListCatalogItemsParams)
 				}
 			}
 		}
-
 	}
 
 	if params.UPC != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "UPC", *params.UPC); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -466,11 +455,9 @@ func NewListCatalogItemsRequest(endpoint string, params *ListCatalogItemsParams)
 				}
 			}
 		}
-
 	}
 
 	if params.EAN != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "EAN", *params.EAN); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -482,11 +469,9 @@ func NewListCatalogItemsRequest(endpoint string, params *ListCatalogItemsParams)
 				}
 			}
 		}
-
 	}
 
 	if params.ISBN != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "ISBN", *params.ISBN); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -498,11 +483,9 @@ func NewListCatalogItemsRequest(endpoint string, params *ListCatalogItemsParams)
 				}
 			}
 		}
-
 	}
 
 	if params.JAN != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "JAN", *params.JAN); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -514,7 +497,6 @@ func NewListCatalogItemsRequest(endpoint string, params *ListCatalogItemsParams)
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()

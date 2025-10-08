@@ -30,8 +30,8 @@ import (
 // section here to a Go object:
 // https://swagger.io/docs/specification/serialization/
 func BindStyledParameter(style string, explode bool, paramName string,
-	value string, dest interface{}) error {
-
+	value string, dest interface{},
+) error {
 	if value == "" {
 		return fmt.Errorf("parameter '%s' is empty, can't bind its value", paramName)
 	}
@@ -240,8 +240,8 @@ func bindSplitPartsToDestinationStruct(paramName string, parts []string, explode
 // you shouldn't pass objects via form styled query arguments, just use
 // the Content parameter form.
 func BindQueryParameter(style string, explode bool, required bool, paramName string,
-	queryParams url.Values, dest interface{}) error {
-
+	queryParams url.Values, dest interface{},
+) error {
 	// dv = destination value.
 	dv := reflect.Indirect(reflect.ValueOf(dest))
 

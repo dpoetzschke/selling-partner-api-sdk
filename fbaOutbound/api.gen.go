@@ -661,7 +661,6 @@ func NewGetFeatureInventoryRequest(endpoint string, featureName string, params *
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "nextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -673,7 +672,6 @@ func NewGetFeatureInventoryRequest(endpoint string, featureName string, params *
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -765,7 +763,6 @@ func NewListAllFulfillmentOrdersRequest(endpoint string, params *ListAllFulfillm
 	queryValues := queryUrl.Query()
 
 	if params.QueryStartDate != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "queryStartDate", *params.QueryStartDate); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -777,11 +774,9 @@ func NewListAllFulfillmentOrdersRequest(endpoint string, params *ListAllFulfillm
 				}
 			}
 		}
-
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "nextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -793,7 +788,6 @@ func NewListAllFulfillmentOrdersRequest(endpoint string, params *ListAllFulfillm
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -1078,7 +1072,6 @@ func NewListReturnReasonCodesRequest(endpoint string, params *ListReturnReasonCo
 	}
 
 	if params.MarketplaceId != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "marketplaceId", *params.MarketplaceId); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1090,11 +1083,9 @@ func NewListReturnReasonCodesRequest(endpoint string, params *ListReturnReasonCo
 				}
 			}
 		}
-
 	}
 
 	if params.SellerFulfillmentOrderId != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "sellerFulfillmentOrderId", *params.SellerFulfillmentOrderId); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1106,7 +1097,6 @@ func NewListReturnReasonCodesRequest(endpoint string, params *ListReturnReasonCo
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "language", params.Language); err != nil {

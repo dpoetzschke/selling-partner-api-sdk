@@ -201,7 +201,6 @@ func NewGetOrderMetricsRequest(endpoint string, params *GetOrderMetricsParams) (
 	}
 
 	if params.GranularityTimeZone != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "granularityTimeZone", *params.GranularityTimeZone); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -213,7 +212,6 @@ func NewGetOrderMetricsRequest(endpoint string, params *GetOrderMetricsParams) (
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "granularity", params.Granularity); err != nil {
@@ -229,7 +227,6 @@ func NewGetOrderMetricsRequest(endpoint string, params *GetOrderMetricsParams) (
 	}
 
 	if params.BuyerType != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "buyerType", *params.BuyerType); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -241,11 +238,9 @@ func NewGetOrderMetricsRequest(endpoint string, params *GetOrderMetricsParams) (
 				}
 			}
 		}
-
 	}
 
 	if params.FulfillmentNetwork != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "fulfillmentNetwork", *params.FulfillmentNetwork); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -257,11 +252,9 @@ func NewGetOrderMetricsRequest(endpoint string, params *GetOrderMetricsParams) (
 				}
 			}
 		}
-
 	}
 
 	if params.FirstDayOfWeek != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "firstDayOfWeek", *params.FirstDayOfWeek); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -273,11 +266,9 @@ func NewGetOrderMetricsRequest(endpoint string, params *GetOrderMetricsParams) (
 				}
 			}
 		}
-
 	}
 
 	if params.Asin != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "asin", *params.Asin); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -289,11 +280,9 @@ func NewGetOrderMetricsRequest(endpoint string, params *GetOrderMetricsParams) (
 				}
 			}
 		}
-
 	}
 
 	if params.Sku != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "sku", *params.Sku); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -305,7 +294,6 @@ func NewGetOrderMetricsRequest(endpoint string, params *GetOrderMetricsParams) (
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()

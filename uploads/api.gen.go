@@ -208,7 +208,6 @@ func NewCreateUploadDestinationForResourceRequest(endpoint string, resource stri
 	}
 
 	if params.ContentType != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "contentType", *params.ContentType); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -220,7 +219,6 @@ func NewCreateUploadDestinationForResourceRequest(endpoint string, resource stri
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()

@@ -11,7 +11,6 @@ import (
 
 // ASINInboundGuidance defines model for ASINInboundGuidance.
 type ASINInboundGuidance struct {
-
 	// The Amazon Standard Identification Number (ASIN) of the item.
 	ASIN string `json:"ASIN"`
 
@@ -27,7 +26,6 @@ type ASINInboundGuidanceList []ASINInboundGuidance
 
 // ASINPrepInstructions defines model for ASINPrepInstructions.
 type ASINPrepInstructions struct {
-
 	// The Amazon Standard Identification Number (ASIN) of the item.
 	ASIN *string `json:"ASIN,omitempty"`
 
@@ -46,7 +44,6 @@ type ASINPrepInstructionsList []ASINPrepInstructions
 
 // Address defines model for Address.
 type Address struct {
-
 	// The street address information.
 	AddressLine1 string `json:"AddressLine1"`
 
@@ -78,7 +75,6 @@ type Address struct {
 
 // AmazonPrepFeesDetails defines model for AmazonPrepFeesDetails.
 type AmazonPrepFeesDetails struct {
-
 	// The monetary value.
 	FeePerUnit *Amount `json:"FeePerUnit,omitempty"`
 
@@ -91,7 +87,6 @@ type AmazonPrepFeesDetailsList []AmazonPrepFeesDetails
 
 // Amount defines model for Amount.
 type Amount struct {
-
 	// The currency code.
 	CurrencyCode CurrencyCode   `json:"CurrencyCode"`
 	Value        BigDecimalType `json:"Value"`
@@ -112,14 +107,12 @@ type BigDecimalType float64
 
 // BillOfLadingDownloadURL defines model for BillOfLadingDownloadURL.
 type BillOfLadingDownloadURL struct {
-
 	// URL to download the bill of lading for the package. Note: The URL will only be valid for 15 seconds
 	DownloadURL *string `json:"DownloadURL,omitempty"`
 }
 
 // BoxContentsFeeDetails defines model for BoxContentsFeeDetails.
 type BoxContentsFeeDetails struct {
-
 	// The monetary value.
 	FeePerUnit *Amount `json:"FeePerUnit,omitempty"`
 
@@ -143,7 +136,6 @@ const (
 
 // CommonTransportResult defines model for CommonTransportResult.
 type CommonTransportResult struct {
-
 	// The workflow status for a shipment with an Amazon-partnered carrier.
 	TransportResult *TransportResult `json:"TransportResult,omitempty"`
 }
@@ -175,7 +167,6 @@ const (
 
 // ConfirmPreorderResponse defines model for ConfirmPreorderResponse.
 type ConfirmPreorderResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList             `json:"errors,omitempty"`
 	Payload *ConfirmPreorderResult `json:"payload,omitempty"`
@@ -189,7 +180,6 @@ type ConfirmPreorderResult struct {
 
 // ConfirmTransportResponse defines model for ConfirmTransportResponse.
 type ConfirmTransportResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList             `json:"errors,omitempty"`
 	Payload *CommonTransportResult `json:"payload,omitempty"`
@@ -197,7 +187,6 @@ type ConfirmTransportResponse struct {
 
 // Contact defines model for Contact.
 type Contact struct {
-
 	// The email address of the contact person.
 	Email string `json:"Email"`
 
@@ -248,7 +237,6 @@ type CreateInboundShipmentPlanRequest struct {
 
 // CreateInboundShipmentPlanResponse defines model for CreateInboundShipmentPlanResponse.
 type CreateInboundShipmentPlanResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList                       `json:"errors,omitempty"`
 	Payload *CreateInboundShipmentPlanResult `json:"payload,omitempty"`
@@ -256,7 +244,6 @@ type CreateInboundShipmentPlanResponse struct {
 
 // CreateInboundShipmentPlanResult defines model for CreateInboundShipmentPlanResult.
 type CreateInboundShipmentPlanResult struct {
-
 	// A list of inbound shipment plan information
 	InboundShipmentPlans *InboundShipmentPlanList `json:"InboundShipmentPlans,omitempty"`
 }
@@ -285,7 +272,6 @@ type Dimensions struct {
 
 // Error defines model for Error.
 type Error struct {
-
 	// An error code that identifies the type of error that occured.
 	Code string `json:"code"`
 
@@ -310,7 +296,6 @@ const (
 
 // EstimateTransportResponse defines model for EstimateTransportResponse.
 type EstimateTransportResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList             `json:"errors,omitempty"`
 	Payload *CommonTransportResult `json:"payload,omitempty"`
@@ -318,7 +303,6 @@ type EstimateTransportResponse struct {
 
 // GetBillOfLadingResponse defines model for GetBillOfLadingResponse.
 type GetBillOfLadingResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList               `json:"errors,omitempty"`
 	Payload *BillOfLadingDownloadURL `json:"payload,omitempty"`
@@ -326,7 +310,6 @@ type GetBillOfLadingResponse struct {
 
 // GetInboundGuidanceResponse defines model for GetInboundGuidanceResponse.
 type GetInboundGuidanceResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList                `json:"errors,omitempty"`
 	Payload *GetInboundGuidanceResult `json:"payload,omitempty"`
@@ -334,7 +317,6 @@ type GetInboundGuidanceResponse struct {
 
 // GetInboundGuidanceResult defines model for GetInboundGuidanceResult.
 type GetInboundGuidanceResult struct {
-
 	// A list of ASINs and their associated inbound guidance.
 	ASINInboundGuidanceList *ASINInboundGuidanceList `json:"ASINInboundGuidanceList,omitempty"`
 
@@ -350,7 +332,6 @@ type GetInboundGuidanceResult struct {
 
 // GetLabelsResponse defines model for GetLabelsResponse.
 type GetLabelsResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList        `json:"errors,omitempty"`
 	Payload *LabelDownloadURL `json:"payload,omitempty"`
@@ -358,7 +339,6 @@ type GetLabelsResponse struct {
 
 // GetPreorderInfoResponse defines model for GetPreorderInfoResponse.
 type GetPreorderInfoResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList             `json:"errors,omitempty"`
 	Payload *GetPreorderInfoResult `json:"payload,omitempty"`
@@ -378,7 +358,6 @@ type GetPreorderInfoResult struct {
 
 // GetPrepInstructionsResponse defines model for GetPrepInstructionsResponse.
 type GetPrepInstructionsResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList                 `json:"errors,omitempty"`
 	Payload *GetPrepInstructionsResult `json:"payload,omitempty"`
@@ -386,7 +365,6 @@ type GetPrepInstructionsResponse struct {
 
 // GetPrepInstructionsResult defines model for GetPrepInstructionsResult.
 type GetPrepInstructionsResult struct {
-
 	// A list of item preparation instructions.
 	ASINPrepInstructionsList *ASINPrepInstructionsList `json:"ASINPrepInstructionsList,omitempty"`
 
@@ -402,7 +380,6 @@ type GetPrepInstructionsResult struct {
 
 // GetShipmentItemsResponse defines model for GetShipmentItemsResponse.
 type GetShipmentItemsResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList              `json:"errors,omitempty"`
 	Payload *GetShipmentItemsResult `json:"payload,omitempty"`
@@ -410,7 +387,6 @@ type GetShipmentItemsResponse struct {
 
 // GetShipmentItemsResult defines model for GetShipmentItemsResult.
 type GetShipmentItemsResult struct {
-
 	// A list of inbound shipment item information.
 	ItemData *InboundShipmentItemList `json:"ItemData,omitempty"`
 
@@ -420,7 +396,6 @@ type GetShipmentItemsResult struct {
 
 // GetShipmentsResponse defines model for GetShipmentsResponse.
 type GetShipmentsResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList          `json:"errors,omitempty"`
 	Payload *GetShipmentsResult `json:"payload,omitempty"`
@@ -428,7 +403,6 @@ type GetShipmentsResponse struct {
 
 // GetShipmentsResult defines model for GetShipmentsResult.
 type GetShipmentsResult struct {
-
 	// When present and not empty, pass this string token in the next request to return the next response page.
 	NextToken *string `json:"NextToken,omitempty"`
 
@@ -438,7 +412,6 @@ type GetShipmentsResult struct {
 
 // GetTransportDetailsResponse defines model for GetTransportDetailsResponse.
 type GetTransportDetailsResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList                 `json:"errors,omitempty"`
 	Payload *GetTransportDetailsResult `json:"payload,omitempty"`
@@ -446,7 +419,6 @@ type GetTransportDetailsResponse struct {
 
 // GetTransportDetailsResult defines model for GetTransportDetailsResult.
 type GetTransportDetailsResult struct {
-
 	// Inbound shipment information, including carrier details, shipment status, and the workflow status for a request for shipment with an Amazon-partnered carrier.
 	TransportContent *TransportContent `json:"TransportContent,omitempty"`
 }
@@ -474,7 +446,6 @@ const (
 
 // InboundShipmentHeader defines model for InboundShipmentHeader.
 type InboundShipmentHeader struct {
-
 	// Indicates whether or not an inbound shipment contains case-packed boxes. Note: A shipment must contain either all case-packed boxes or all individually packed boxes.
 	//
 	// Possible values:
@@ -505,7 +476,6 @@ type InboundShipmentHeader struct {
 
 // InboundShipmentInfo defines model for InboundShipmentInfo.
 type InboundShipmentInfo struct {
-
 	// Indicates whether or not an inbound shipment contains case-packed boxes. When AreCasesRequired = true for an inbound shipment, all items in the inbound shipment must be case packed.
 	AreCasesRequired bool `json:"AreCasesRequired"`
 
@@ -535,7 +505,6 @@ type InboundShipmentInfo struct {
 
 // InboundShipmentItem defines model for InboundShipmentItem.
 type InboundShipmentItem struct {
-
 	// Amazon's fulfillment network SKU of the item.
 	FulfillmentNetworkSKU *string `json:"FulfillmentNetworkSKU,omitempty"`
 
@@ -549,8 +518,8 @@ type InboundShipmentItem struct {
 	QuantityReceived *Quantity `json:"QuantityReceived,omitempty"`
 
 	// The item quantity.
-	QuantityShipped Quantity        `json:"QuantityShipped"`
-	ReleaseDate     *DateStringType `json:"ReleaseDate,omitempty"`
+	QuantityShipped Quantity `json:"QuantityShipped"`
+	ReleaseDate     *string  `json:"ReleaseDate,omitempty"`
 
 	// The seller SKU of the item.
 	SellerSKU string `json:"SellerSKU"`
@@ -567,7 +536,6 @@ type InboundShipmentList []InboundShipmentInfo
 
 // InboundShipmentPlan defines model for InboundShipmentPlan.
 type InboundShipmentPlan struct {
-
 	// An Amazon fulfillment center identifier created by Amazon.
 	DestinationFulfillmentCenterId string `json:"DestinationFulfillmentCenterId"`
 
@@ -587,7 +555,6 @@ type InboundShipmentPlan struct {
 
 // InboundShipmentPlanItem defines model for InboundShipmentPlanItem.
 type InboundShipmentPlanItem struct {
-
 	// Amazon's fulfillment network SKU of the item.
 	FulfillmentNetworkSKU string `json:"FulfillmentNetworkSKU"`
 
@@ -609,7 +576,6 @@ type InboundShipmentPlanList []InboundShipmentPlan
 
 // InboundShipmentPlanRequestItem defines model for InboundShipmentPlanRequestItem.
 type InboundShipmentPlanRequestItem struct {
-
 	// The Amazon Standard Identification Number (ASIN) of the item.
 	ASIN string `json:"ASIN"`
 
@@ -634,7 +600,6 @@ type InboundShipmentPlanRequestItemList []InboundShipmentPlanRequestItem
 
 // InboundShipmentRequest defines model for InboundShipmentRequest.
 type InboundShipmentRequest struct {
-
 	// Inbound shipment information used to create and update inbound shipments.
 	InboundShipmentHeader InboundShipmentHeader `json:"InboundShipmentHeader"`
 
@@ -647,7 +612,6 @@ type InboundShipmentRequest struct {
 
 // InboundShipmentResponse defines model for InboundShipmentResponse.
 type InboundShipmentResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList             `json:"errors,omitempty"`
 	Payload *InboundShipmentResult `json:"payload,omitempty"`
@@ -655,7 +619,6 @@ type InboundShipmentResponse struct {
 
 // InboundShipmentResult defines model for InboundShipmentResult.
 type InboundShipmentResult struct {
-
 	// The shipment identifier submitted in the request.
 	ShipmentId string `json:"ShipmentId"`
 }
@@ -672,7 +635,6 @@ const (
 
 // InvalidASIN defines model for InvalidASIN.
 type InvalidASIN struct {
-
 	// The Amazon Standard Identification Number (ASIN) of the item.
 	ASIN *string `json:"ASIN,omitempty"`
 
@@ -685,7 +647,6 @@ type InvalidASINList []InvalidASIN
 
 // InvalidSKU defines model for InvalidSKU.
 type InvalidSKU struct {
-
 	// The reason that the ASIN is invalid.
 	ErrorReason *ErrorReason `json:"ErrorReason,omitempty"`
 
@@ -698,7 +659,6 @@ type InvalidSKUList []InvalidSKU
 
 // LabelDownloadURL defines model for LabelDownloadURL.
 type LabelDownloadURL struct {
-
 	// URL to download the label for the package. Note: The URL will only be valid for 15 seconds
 	DownloadURL *string `json:"DownloadURL,omitempty"`
 }
@@ -725,7 +685,6 @@ const (
 
 // NonPartneredLtlDataInput defines model for NonPartneredLtlDataInput.
 type NonPartneredLtlDataInput struct {
-
 	// The carrier that you are using for the inbound shipment.
 	CarrierName string `json:"CarrierName"`
 
@@ -735,7 +694,6 @@ type NonPartneredLtlDataInput struct {
 
 // NonPartneredLtlDataOutput defines model for NonPartneredLtlDataOutput.
 type NonPartneredLtlDataOutput struct {
-
 	// The carrier that you are using for the inbound shipment.
 	CarrierName string `json:"CarrierName"`
 
@@ -745,7 +703,6 @@ type NonPartneredLtlDataOutput struct {
 
 // NonPartneredSmallParcelDataInput defines model for NonPartneredSmallParcelDataInput.
 type NonPartneredSmallParcelDataInput struct {
-
 	// The carrier that you are using for the inbound shipment.
 	CarrierName string `json:"CarrierName"`
 
@@ -755,14 +712,12 @@ type NonPartneredSmallParcelDataInput struct {
 
 // NonPartneredSmallParcelDataOutput defines model for NonPartneredSmallParcelDataOutput.
 type NonPartneredSmallParcelDataOutput struct {
-
 	// A list of packages, including carrier, tracking number, and status information for each package.
 	PackageList NonPartneredSmallParcelPackageOutputList `json:"PackageList"`
 }
 
 // NonPartneredSmallParcelPackageInput defines model for NonPartneredSmallParcelPackageInput.
 type NonPartneredSmallParcelPackageInput struct {
-
 	// The tracking number of the package, provided by the carrier.
 	TrackingId TrackingId `json:"TrackingId"`
 }
@@ -772,7 +727,6 @@ type NonPartneredSmallParcelPackageInputList []NonPartneredSmallParcelPackageInp
 
 // NonPartneredSmallParcelPackageOutput defines model for NonPartneredSmallParcelPackageOutput.
 type NonPartneredSmallParcelPackageOutput struct {
-
 	// The carrier that you are using for the inbound shipment.
 	CarrierName string `json:"CarrierName"`
 
@@ -802,7 +756,6 @@ const (
 
 // Pallet defines model for Pallet.
 type Pallet struct {
-
 	// The dimension values and unit of measurement.
 	Dimensions Dimensions `json:"Dimensions"`
 
@@ -818,7 +771,6 @@ type PalletList []Pallet
 
 // PartneredEstimate defines model for PartneredEstimate.
 type PartneredEstimate struct {
-
 	// The monetary value.
 	Amount          Amount               `json:"Amount"`
 	ConfirmDeadline *TimeStampStringType `json:"ConfirmDeadline,omitempty"`
@@ -848,7 +800,6 @@ type PartneredLtlDataInput struct {
 
 // PartneredLtlDataOutput defines model for PartneredLtlDataOutput.
 type PartneredLtlDataOutput struct {
-
 	// The monetary value.
 	AmazonCalculatedValue *Amount `json:"AmazonCalculatedValue,omitempty"`
 
@@ -889,7 +840,6 @@ type PartneredLtlDataOutput struct {
 
 // PartneredSmallParcelDataInput defines model for PartneredSmallParcelDataInput.
 type PartneredSmallParcelDataInput struct {
-
 	// The Amazon-partnered carrier to use for the inbound shipment.
 	CarrierName *string `json:"CarrierName,omitempty"`
 
@@ -899,7 +849,6 @@ type PartneredSmallParcelDataInput struct {
 
 // PartneredSmallParcelDataOutput defines model for PartneredSmallParcelDataOutput.
 type PartneredSmallParcelDataOutput struct {
-
 	// A list of packages, including shipping information from the Amazon-partnered carrier.
 	PackageList PartneredSmallParcelPackageOutputList `json:"PackageList"`
 
@@ -909,7 +858,6 @@ type PartneredSmallParcelDataOutput struct {
 
 // PartneredSmallParcelPackageInput defines model for PartneredSmallParcelPackageInput.
 type PartneredSmallParcelPackageInput struct {
-
 	// The dimension values and unit of measurement.
 	Dimensions Dimensions `json:"Dimensions"`
 
@@ -922,7 +870,6 @@ type PartneredSmallParcelPackageInputList []PartneredSmallParcelPackageInput
 
 // PartneredSmallParcelPackageOutput defines model for PartneredSmallParcelPackageOutput.
 type PartneredSmallParcelPackageOutput struct {
-
 	// The carrier specified with a previous call to putTransportDetails.
 	CarrierName string `json:"CarrierName"`
 
@@ -944,7 +891,6 @@ type PartneredSmallParcelPackageOutputList []PartneredSmallParcelPackageOutput
 
 // PrepDetails defines model for PrepDetails.
 type PrepDetails struct {
-
 	// Preparation instructions for shipping an item to Amazon's fulfillment network. For more information about preparing items for shipment to Amazon's fulfillment network, see the Seller Central Help for your marketplace.
 	PrepInstruction PrepInstruction `json:"PrepInstruction"`
 
@@ -995,7 +941,6 @@ type ProNumber string
 
 // PutTransportDetailsRequest defines model for PutTransportDetailsRequest.
 type PutTransportDetailsRequest struct {
-
 	// Indicates whether a putTransportDetails request is for an Amazon-partnered carrier.
 	IsPartnered bool `json:"IsPartnered"`
 
@@ -1008,7 +953,6 @@ type PutTransportDetailsRequest struct {
 
 // PutTransportDetailsResponse defines model for PutTransportDetailsResponse.
 type PutTransportDetailsResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList             `json:"errors,omitempty"`
 	Payload *CommonTransportResult `json:"payload,omitempty"`
@@ -1019,7 +963,6 @@ type Quantity int32
 
 // SKUInboundGuidance defines model for SKUInboundGuidance.
 type SKUInboundGuidance struct {
-
 	// The Amazon Standard Identification Number (ASIN) of the item.
 	ASIN string `json:"ASIN"`
 
@@ -1038,7 +981,6 @@ type SKUInboundGuidanceList []SKUInboundGuidance
 
 // SKUPrepInstructions defines model for SKUPrepInstructions.
 type SKUPrepInstructions struct {
-
 	// The Amazon Standard Identification Number (ASIN) of the item.
 	ASIN *string `json:"ASIN,omitempty"`
 
@@ -1115,7 +1057,6 @@ type TrackingId string
 
 // TransportContent defines model for TransportContent.
 type TransportContent struct {
-
 	// Inbound shipment information, including carrier details and shipment status.
 	TransportDetails TransportDetailOutput `json:"TransportDetails"`
 
@@ -1128,7 +1069,6 @@ type TransportContent struct {
 
 // TransportDetailInput defines model for TransportDetailInput.
 type TransportDetailInput struct {
-
 	// Information that you provide to Amazon about a Less Than Truckload/Full Truckload (LTL/FTL) shipment by a carrier that has not partnered with Amazon.
 	NonPartneredLtlData *NonPartneredLtlDataInput `json:"NonPartneredLtlData,omitempty"`
 
@@ -1144,7 +1084,6 @@ type TransportDetailInput struct {
 
 // TransportDetailOutput defines model for TransportDetailOutput.
 type TransportDetailOutput struct {
-
 	// Information returned by Amazon about a Less Than Truckload/Full Truckload (LTL/FTL) shipment shipped by a carrier that has not partnered with Amazon.
 	NonPartneredLtlData *NonPartneredLtlDataOutput `json:"NonPartneredLtlData,omitempty"`
 
@@ -1160,7 +1099,6 @@ type TransportDetailOutput struct {
 
 // TransportHeader defines model for TransportHeader.
 type TransportHeader struct {
-
 	// Indicates whether a putTransportDetails request is for a partnered carrier.
 	//
 	// Possible values:
@@ -1182,7 +1120,6 @@ type TransportHeader struct {
 
 // TransportResult defines model for TransportResult.
 type TransportResult struct {
-
 	// An error code that identifies the type of error that occured.
 	ErrorCode *string `json:"ErrorCode,omitempty"`
 
@@ -1234,7 +1171,6 @@ type UnsignedIntType int64
 
 // VoidTransportResponse defines model for VoidTransportResponse.
 type VoidTransportResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors  *ErrorList             `json:"errors,omitempty"`
 	Payload *CommonTransportResult `json:"payload,omitempty"`
@@ -1242,7 +1178,6 @@ type VoidTransportResponse struct {
 
 // Weight defines model for Weight.
 type Weight struct {
-
 	// Indicates the unit of weight.
 	Unit  UnitOfWeight   `json:"Unit"`
 	Value BigDecimalType `json:"Value"`
@@ -1250,7 +1185,6 @@ type Weight struct {
 
 // GetInboundGuidanceParams defines parameters for GetInboundGuidance.
 type GetInboundGuidanceParams struct {
-
 	// A marketplace identifier. Specifies the marketplace where the product would be stored.
 	MarketplaceId string `json:"MarketplaceId"`
 
@@ -1266,7 +1200,6 @@ type CreateInboundShipmentPlanJSONBody CreateInboundShipmentPlanRequest
 
 // GetPrepInstructionsParams defines parameters for GetPrepInstructions.
 type GetPrepInstructionsParams struct {
-
 	// The country code of the country to which the items will be shipped. Note that labeling requirements and item preparation instructions can vary by country.
 	ShipToCountryCode string `json:"ShipToCountryCode"`
 
@@ -1283,7 +1216,6 @@ type GetPrepInstructionsParams struct {
 
 // GetShipmentItemsParams defines parameters for GetShipmentItems.
 type GetShipmentItemsParams struct {
-
 	// A date used for selecting inbound shipment items that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller.
 	LastUpdatedAfter *time.Time `json:"LastUpdatedAfter,omitempty"`
 
@@ -1302,7 +1234,6 @@ type GetShipmentItemsParams struct {
 
 // GetShipmentsParams defines parameters for GetShipments.
 type GetShipmentsParams struct {
-
 	// A list of ShipmentStatus values. Used to select shipments with a current status that matches the status values that you specify.
 	ShipmentStatusList *[]string `json:"ShipmentStatusList,omitempty"`
 
@@ -1333,14 +1264,12 @@ type UpdateInboundShipmentJSONBody InboundShipmentRequest
 
 // GetShipmentItemsByShipmentIdParams defines parameters for GetShipmentItemsByShipmentId.
 type GetShipmentItemsByShipmentIdParams struct {
-
 	// A marketplace identifier. Specifies the marketplace where the product would be stored.
 	MarketplaceId string `json:"MarketplaceId"`
 }
 
 // GetLabelsParams defines parameters for GetLabels.
 type GetLabelsParams struct {
-
 	// The page type to use to print the labels. Submitting a PageType value that is not supported in your marketplace returns an error.
 	PageType string `json:"PageType"`
 
@@ -1361,14 +1290,12 @@ type GetLabelsParams struct {
 
 // GetPreorderInfoParams defines parameters for GetPreorderInfo.
 type GetPreorderInfoParams struct {
-
 	// A marketplace identifier. Specifies the marketplace the shipment is tied to.
 	MarketplaceId string `json:"MarketplaceId"`
 }
 
 // ConfirmPreorderParams defines parameters for ConfirmPreorder.
 type ConfirmPreorderParams struct {
-
 	// Date that the shipment must arrive at the Amazon fulfillment center to avoid delivery promise breaks for pre-ordered items. Must be in YYYY-MM-DD format. The response to the getPreorderInfo operation returns this value.
 	NeedByDate openapi_types.Date `json:"NeedByDate"`
 

@@ -177,7 +177,6 @@ func NewGetInventorySummariesRequest(endpoint string, params *GetInventorySummar
 	queryValues := queryUrl.Query()
 
 	if params.Details != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "details", *params.Details); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -189,7 +188,6 @@ func NewGetInventorySummariesRequest(endpoint string, params *GetInventorySummar
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "granularityType", params.GranularityType); err != nil {
@@ -217,7 +215,6 @@ func NewGetInventorySummariesRequest(endpoint string, params *GetInventorySummar
 	}
 
 	if params.StartDateTime != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "startDateTime", *params.StartDateTime); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -229,11 +226,9 @@ func NewGetInventorySummariesRequest(endpoint string, params *GetInventorySummar
 				}
 			}
 		}
-
 	}
 
 	if params.SellerSkus != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "sellerSkus", *params.SellerSkus); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -245,11 +240,9 @@ func NewGetInventorySummariesRequest(endpoint string, params *GetInventorySummar
 				}
 			}
 		}
-
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "nextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -261,7 +254,6 @@ func NewGetInventorySummariesRequest(endpoint string, params *GetInventorySummar
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "marketplaceIds", params.MarketplaceIds); err != nil {

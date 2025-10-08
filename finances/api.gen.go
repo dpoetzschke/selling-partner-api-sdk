@@ -273,7 +273,6 @@ func NewListFinancialEventGroupsRequest(endpoint string, params *ListFinancialEv
 	queryValues := queryUrl.Query()
 
 	if params.MaxResultsPerPage != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "MaxResultsPerPage", *params.MaxResultsPerPage); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -285,11 +284,9 @@ func NewListFinancialEventGroupsRequest(endpoint string, params *ListFinancialEv
 				}
 			}
 		}
-
 	}
 
 	if params.FinancialEventGroupStartedBefore != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "FinancialEventGroupStartedBefore", *params.FinancialEventGroupStartedBefore); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -301,11 +298,9 @@ func NewListFinancialEventGroupsRequest(endpoint string, params *ListFinancialEv
 				}
 			}
 		}
-
 	}
 
 	if params.FinancialEventGroupStartedAfter != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "FinancialEventGroupStartedAfter", *params.FinancialEventGroupStartedAfter); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -317,11 +312,9 @@ func NewListFinancialEventGroupsRequest(endpoint string, params *ListFinancialEv
 				}
 			}
 		}
-
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -333,7 +326,6 @@ func NewListFinancialEventGroupsRequest(endpoint string, params *ListFinancialEv
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -375,7 +367,6 @@ func NewListFinancialEventsByGroupIdRequest(endpoint string, eventGroupId string
 	queryValues := queryUrl.Query()
 
 	if params.MaxResultsPerPage != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "MaxResultsPerPage", *params.MaxResultsPerPage); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -387,11 +378,9 @@ func NewListFinancialEventsByGroupIdRequest(endpoint string, eventGroupId string
 				}
 			}
 		}
-
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -403,7 +392,6 @@ func NewListFinancialEventsByGroupIdRequest(endpoint string, eventGroupId string
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -438,7 +426,6 @@ func NewListFinancialEventsRequest(endpoint string, params *ListFinancialEventsP
 	queryValues := queryUrl.Query()
 
 	if params.MaxResultsPerPage != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "MaxResultsPerPage", *params.MaxResultsPerPage); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -450,11 +437,9 @@ func NewListFinancialEventsRequest(endpoint string, params *ListFinancialEventsP
 				}
 			}
 		}
-
 	}
 
 	if params.PostedAfter != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "PostedAfter", *params.PostedAfter); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -466,11 +451,9 @@ func NewListFinancialEventsRequest(endpoint string, params *ListFinancialEventsP
 				}
 			}
 		}
-
 	}
 
 	if params.PostedBefore != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "PostedBefore", *params.PostedBefore); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -482,11 +465,9 @@ func NewListFinancialEventsRequest(endpoint string, params *ListFinancialEventsP
 				}
 			}
 		}
-
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -498,7 +479,6 @@ func NewListFinancialEventsRequest(endpoint string, params *ListFinancialEventsP
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -540,7 +520,6 @@ func NewListFinancialEventsByOrderIdRequest(endpoint string, orderId string, par
 	queryValues := queryUrl.Query()
 
 	if params.MaxResultsPerPage != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "MaxResultsPerPage", *params.MaxResultsPerPage); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -552,11 +531,9 @@ func NewListFinancialEventsByOrderIdRequest(endpoint string, orderId string, par
 				}
 			}
 		}
-
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -568,7 +545,6 @@ func NewListFinancialEventsByOrderIdRequest(endpoint string, orderId string, par
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()

@@ -15,7 +15,7 @@ go get -u github.com/dpoetzschke/selling-partner-api-sdk
 * [X] fbaInbound ([fulfillment-inbound-api-model](https://github.com/amzn/selling-partner-api-docs/blob/main/references/fulfillment-inbound-api/fulfillmentInboundV0.md) [DOC](https://github.com/amzn/selling-partner-api-docs/blob/main/references/fulfillment-inbound-api/fulfillmentInboundV0.md))
 * [X] fbaInventory ([fba-inventory-api-model](https://github.com/amzn/selling-partner-api-models/blob/main/models/fba-inventory-api-model/fbaInventory.json) [DOC](https://github.com/amzn/selling-partner-api-docs/blob/main/references/fba-inventory-api/fbaInventory.md))
 * [X] fbaOutbound ([fulfillment-outbound-api-model](https://github.com/amzn/selling-partner-api-models/blob/main/models/fulfillment-outbound-api-model/fulfillmentOutbound_2020-07-01.json) [DOC](https://github.com/amzn/selling-partner-api-docs/blob/main/references/fulfillment-outbound-api/fulfillmentOutbound_2020-07-01.md))
-* [X] feeds ([feeds-api-model](https://github.com/amzn/selling-partner-api-models/blob/main/models/feeds-api-model/feeds_2020-09-04.json) [DOC](https://github.com/amzn/selling-partner-api-docs/tree/main/references/feeds-api))
+* [X] feeds ([feeds-api-model](https://github.com/amzn/selling-partner-api-models/blob/main/models/feeds-api-model/feeds_2021-06-30.json) [DOC](https://github.com/amzn/selling-partner-api-docs/tree/main/references/feeds-api))
 * [X] fees ([product-fees-api-model](https://github.com/amzn/selling-partner-api-models/blob/main/models/product-fees-api-model/productFeesV0.json) [DOC](https://github.com/amzn/selling-partner-api-docs/blob/main/references/product-fees-api/productFeesV0.md))
 * [X] finances ([finances-api-model](https://github.com/amzn/selling-partner-api-models/blob/main/models/finances-api-model/financesV0.json) [DOC](https://github.com/amzn/selling-partner-api-docs/blob/main/references/finances-api/financesV0.md))
 * [X] merchantFulfillment ([merchant-fulfillment-api-model](https://github.com/amzn/selling-partner-api-models/blob/main/models/merchant-fulfillment-api-model/merchantFulfillmentV0.json) [DOC](https://github.com/amzn/selling-partner-api-docs/blob/main/references/merchant-fulfillment-api/merchantFulfillmentV0.md))
@@ -56,10 +56,6 @@ func main() {
 		ClientID:     "<ClientID>",
 		ClientSecret: "<ClientSecret>",
 		RefreshToken: "<RefreshToken>",
-		AccessKeyID: "<AWS IAM User Access Key Id>",
-		SecretKey:   "<AWS IAM User Secret Key>",
-		Region:      "<AWS Region>",
-		RoleArn:     "<AWS IAM Role ARN>",
 	})
 
 	if err != nil {
@@ -71,7 +67,7 @@ func main() {
 	seller, err := sellers.NewClientWithResponses(endpoint,
 		sellers.WithRequestBefore(func(ctx context.Context, req *http.Request) error {
 			req.Header.Add("X-Amzn-Requestid", uuid.New().String()) //tracking requests
-			err = sellingPartner.SignRequest(req)
+			err = sellingPartner.AuthorizeRequest(req)
 			if err != nil {
 				return errors.Wrap(err, "sign error")
 			}
@@ -117,10 +113,6 @@ func TestSellingPartnerGetReportDocumentThirdParty(t *testing.T) {
 		ClientID:     "***",
 		ClientSecret: "***",
 		RefreshToken: "***",
-		AccessKeyID:  "***",
-		SecretKey:    "***",
-		Region:       "***",
-		RoleArn:      "***",
 	})
 
 	if err != nil {
@@ -129,7 +121,7 @@ func TestSellingPartnerGetReportDocumentThirdParty(t *testing.T) {
 
 	report, err := reports.NewClientWithResponses(spiHost,
 		reports.WithRequestBefore(func(ctx context.Context, req *http.Request) error {
-			err = sellingPartner.SignRequest(req)
+			err = sellingPartner.AuthorizeRequest(req)
 			if err != nil {
 				return errors.Wrap(err, "sign error")
 			}

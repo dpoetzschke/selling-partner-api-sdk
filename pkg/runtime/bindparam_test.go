@@ -379,5 +379,4 @@ func TestBindParamsToExplodedObject(t *testing.T) {
 	var aDstDate AliasedDate
 	err = bindParamsToExplodedObject("date", values, &aDstDate)
 	assert.EqualValues(t, expectedDate, aDstDate)
-
 }

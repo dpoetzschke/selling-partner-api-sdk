@@ -771,7 +771,6 @@ func NewGetInboundGuidanceRequest(endpoint string, params *GetInboundGuidancePar
 	}
 
 	if params.SellerSKUList != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "SellerSKUList", *params.SellerSKUList); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -783,11 +782,9 @@ func NewGetInboundGuidanceRequest(endpoint string, params *GetInboundGuidancePar
 				}
 			}
 		}
-
 	}
 
 	if params.ASINList != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "ASINList", *params.ASINList); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -799,7 +796,6 @@ func NewGetInboundGuidanceRequest(endpoint string, params *GetInboundGuidancePar
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -885,7 +881,6 @@ func NewGetPrepInstructionsRequest(endpoint string, params *GetPrepInstructionsP
 	}
 
 	if params.SellerSKUList != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "SellerSKUList", *params.SellerSKUList); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -897,11 +892,9 @@ func NewGetPrepInstructionsRequest(endpoint string, params *GetPrepInstructionsP
 				}
 			}
 		}
-
 	}
 
 	if params.ASINList != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "ASINList", *params.ASINList); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -913,7 +906,6 @@ func NewGetPrepInstructionsRequest(endpoint string, params *GetPrepInstructionsP
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -948,7 +940,6 @@ func NewGetShipmentItemsRequest(endpoint string, params *GetShipmentItemsParams)
 	queryValues := queryUrl.Query()
 
 	if params.LastUpdatedAfter != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "LastUpdatedAfter", *params.LastUpdatedAfter); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -960,11 +951,9 @@ func NewGetShipmentItemsRequest(endpoint string, params *GetShipmentItemsParams)
 				}
 			}
 		}
-
 	}
 
 	if params.LastUpdatedBefore != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "LastUpdatedBefore", *params.LastUpdatedBefore); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -976,7 +965,6 @@ func NewGetShipmentItemsRequest(endpoint string, params *GetShipmentItemsParams)
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "QueryType", params.QueryType); err != nil {
@@ -992,7 +980,6 @@ func NewGetShipmentItemsRequest(endpoint string, params *GetShipmentItemsParams)
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1004,7 +991,6 @@ func NewGetShipmentItemsRequest(endpoint string, params *GetShipmentItemsParams)
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "MarketplaceId", params.MarketplaceId); err != nil {
@@ -1051,7 +1037,6 @@ func NewGetShipmentsRequest(endpoint string, params *GetShipmentsParams) (*http.
 	queryValues := queryUrl.Query()
 
 	if params.ShipmentStatusList != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "ShipmentStatusList", *params.ShipmentStatusList); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1063,11 +1048,9 @@ func NewGetShipmentsRequest(endpoint string, params *GetShipmentsParams) (*http.
 				}
 			}
 		}
-
 	}
 
 	if params.ShipmentIdList != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "ShipmentIdList", *params.ShipmentIdList); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1079,11 +1062,9 @@ func NewGetShipmentsRequest(endpoint string, params *GetShipmentsParams) (*http.
 				}
 			}
 		}
-
 	}
 
 	if params.LastUpdatedAfter != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "LastUpdatedAfter", *params.LastUpdatedAfter); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1095,11 +1076,9 @@ func NewGetShipmentsRequest(endpoint string, params *GetShipmentsParams) (*http.
 				}
 			}
 		}
-
 	}
 
 	if params.LastUpdatedBefore != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "LastUpdatedBefore", *params.LastUpdatedBefore); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1111,7 +1090,6 @@ func NewGetShipmentsRequest(endpoint string, params *GetShipmentsParams) (*http.
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "QueryType", params.QueryType); err != nil {
@@ -1127,7 +1105,6 @@ func NewGetShipmentsRequest(endpoint string, params *GetShipmentsParams) (*http.
 	}
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1139,7 +1116,6 @@ func NewGetShipmentsRequest(endpoint string, params *GetShipmentsParams) (*http.
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "MarketplaceId", params.MarketplaceId); err != nil {
@@ -1393,7 +1369,6 @@ func NewGetLabelsRequest(endpoint string, shipmentId string, params *GetLabelsPa
 	}
 
 	if params.NumberOfPackages != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NumberOfPackages", *params.NumberOfPackages); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1405,11 +1380,9 @@ func NewGetLabelsRequest(endpoint string, shipmentId string, params *GetLabelsPa
 				}
 			}
 		}
-
 	}
 
 	if params.PackageLabelsToPrint != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "PackageLabelsToPrint", *params.PackageLabelsToPrint); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1421,11 +1394,9 @@ func NewGetLabelsRequest(endpoint string, shipmentId string, params *GetLabelsPa
 				}
 			}
 		}
-
 	}
 
 	if params.NumberOfPallets != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NumberOfPallets", *params.NumberOfPallets); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -1437,7 +1408,6 @@ func NewGetLabelsRequest(endpoint string, shipmentId string, params *GetLabelsPa
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()

@@ -373,7 +373,6 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 	queryValues := queryUrl.Query()
 
 	if params.ServiceOrderIds != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "serviceOrderIds", *params.ServiceOrderIds); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -385,11 +384,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.ServiceJobStatus != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "serviceJobStatus", *params.ServiceJobStatus); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -401,11 +398,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.PageToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "pageToken", *params.PageToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -417,11 +412,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.PageSize != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "pageSize", *params.PageSize); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -433,11 +426,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.SortField != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "sortField", *params.SortField); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -449,11 +440,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.SortOrder != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "sortOrder", *params.SortOrder); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -465,11 +454,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.CreatedAfter != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "createdAfter", *params.CreatedAfter); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -481,11 +468,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.CreatedBefore != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "createdBefore", *params.CreatedBefore); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -497,11 +482,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.LastUpdatedAfter != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "lastUpdatedAfter", *params.LastUpdatedAfter); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -513,11 +496,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.LastUpdatedBefore != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "lastUpdatedBefore", *params.LastUpdatedBefore); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -529,11 +510,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.ScheduleStartDate != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "scheduleStartDate", *params.ScheduleStartDate); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -545,11 +524,9 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if params.ScheduleEndDate != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "scheduleEndDate", *params.ScheduleEndDate); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -561,7 +538,6 @@ func NewGetServiceJobsRequest(endpoint string, params *GetServiceJobsParams) (*h
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "marketplaceIds", params.MarketplaceIds); err != nil {

@@ -337,7 +337,6 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 	queryValues := queryUrl.Query()
 
 	if params.CreatedAfter != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "CreatedAfter", *params.CreatedAfter); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -349,11 +348,9 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.CreatedBefore != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "CreatedBefore", *params.CreatedBefore); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -365,11 +362,9 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.LastUpdatedAfter != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "LastUpdatedAfter", *params.LastUpdatedAfter); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -381,11 +376,9 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.LastUpdatedBefore != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "LastUpdatedBefore", *params.LastUpdatedBefore); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -397,11 +390,9 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.OrderStatuses != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "OrderStatuses", *params.OrderStatuses); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -413,7 +404,6 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "MarketplaceIds", params.MarketplaceIds); err != nil {
@@ -429,7 +419,6 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 	}
 
 	if params.FulfillmentChannels != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "FulfillmentChannels", *params.FulfillmentChannels); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -441,11 +430,9 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.PaymentMethods != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "PaymentMethods", *params.PaymentMethods); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -457,11 +444,9 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.BuyerEmail != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "BuyerEmail", *params.BuyerEmail); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -473,11 +458,9 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.SellerOrderId != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "SellerOrderId", *params.SellerOrderId); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -489,11 +472,9 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.MaxResultsPerPage != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "MaxResultsPerPage", *params.MaxResultsPerPage); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -505,11 +486,9 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.EasyShipShipmentStatuses != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "EasyShipShipmentStatuses", *params.EasyShipShipmentStatuses); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -521,27 +500,13 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	if params.NextToken != nil {
-
-		if queryFrag, err := runtime.StyleParam("form", true, "NextToken", *params.NextToken); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
-				}
-			}
-		}
-
+		queryValues.Add("NextToken", *params.NextToken)
 	}
 
 	if params.AmazonOrderIds != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "AmazonOrderIds", *params.AmazonOrderIds); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -553,7 +518,6 @@ func NewGetOrdersRequest(endpoint string, params *GetOrdersParams) (*http.Reques
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -697,7 +661,6 @@ func NewGetOrderItemsRequest(endpoint string, orderId string, params *GetOrderIt
 	queryValues := queryUrl.Query()
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -709,7 +672,6 @@ func NewGetOrderItemsRequest(endpoint string, orderId string, params *GetOrderIt
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
@@ -751,7 +713,6 @@ func NewGetOrderItemsBuyerInfoRequest(endpoint string, orderId string, params *G
 	queryValues := queryUrl.Query()
 
 	if params.NextToken != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "NextToken", *params.NextToken); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -763,7 +724,6 @@ func NewGetOrderItemsBuyerInfoRequest(endpoint string, orderId string, params *G
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()

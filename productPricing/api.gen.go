@@ -285,7 +285,6 @@ func NewGetCompetitivePricingRequest(endpoint string, params *GetCompetitivePric
 	}
 
 	if params.Asins != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "Asins", *params.Asins); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -297,11 +296,9 @@ func NewGetCompetitivePricingRequest(endpoint string, params *GetCompetitivePric
 				}
 			}
 		}
-
 	}
 
 	if params.Skus != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "Skus", *params.Skus); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -313,7 +310,6 @@ func NewGetCompetitivePricingRequest(endpoint string, params *GetCompetitivePric
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "ItemType", params.ItemType); err != nil {
@@ -496,7 +492,6 @@ func NewGetPricingRequest(endpoint string, params *GetPricingParams) (*http.Requ
 	}
 
 	if params.Asins != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "Asins", *params.Asins); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -508,11 +503,9 @@ func NewGetPricingRequest(endpoint string, params *GetPricingParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	if params.Skus != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "Skus", *params.Skus); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -524,7 +517,6 @@ func NewGetPricingRequest(endpoint string, params *GetPricingParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	if queryFrag, err := runtime.StyleParam("form", true, "ItemType", params.ItemType); err != nil {
@@ -540,7 +532,6 @@ func NewGetPricingRequest(endpoint string, params *GetPricingParams) (*http.Requ
 	}
 
 	if params.ItemCondition != nil {
-
 		if queryFrag, err := runtime.StyleParam("form", true, "ItemCondition", *params.ItemCondition); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
@@ -552,7 +543,6 @@ func NewGetPricingRequest(endpoint string, params *GetPricingParams) (*http.Requ
 				}
 			}
 		}
-
 	}
 
 	queryUrl.RawQuery = queryValues.Encode()
