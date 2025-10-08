@@ -5,7 +5,6 @@ package ordersV0
 
 // Address defines model for Address.
 type Address struct {
-
 	// The street address.
 	AddressLine1 *string `json:"AddressLine1,omitempty"`
 
@@ -48,14 +47,12 @@ type Address struct {
 
 // BuyerCustomizedInfoDetail defines model for BuyerCustomizedInfoDetail.
 type BuyerCustomizedInfoDetail struct {
-
 	// The location of a zip file containing Amazon Custom data.
 	CustomizedURL *string `json:"CustomizedURL,omitempty"`
 }
 
 // BuyerTaxInfo defines model for BuyerTaxInfo.
 type BuyerTaxInfo struct {
-
 	// The legal name of the company.
 	CompanyLegalName *string `json:"CompanyLegalName,omitempty"`
 
@@ -68,7 +65,6 @@ type BuyerTaxInfo struct {
 
 // Error defines model for Error.
 type Error struct {
-
 	// An error code that identifies the type of error that occurred.
 	Code string `json:"code"`
 
@@ -84,14 +80,12 @@ type ErrorList []Error
 
 // FulfillmentInstruction defines model for FulfillmentInstruction.
 type FulfillmentInstruction struct {
-
 	// Denotes the recommended sourceId where the order should be fulfilled from.
 	FulfillmentSupplySourceId *string `json:"FulfillmentSupplySourceId,omitempty"`
 }
 
 // GetOrderAddressResponse defines model for GetOrderAddressResponse.
 type GetOrderAddressResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors *ErrorList `json:"errors,omitempty"`
 
@@ -101,7 +95,6 @@ type GetOrderAddressResponse struct {
 
 // GetOrderBuyerInfoResponse defines model for GetOrderBuyerInfoResponse.
 type GetOrderBuyerInfoResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors *ErrorList `json:"errors,omitempty"`
 
@@ -111,7 +104,6 @@ type GetOrderBuyerInfoResponse struct {
 
 // GetOrderItemsBuyerInfoResponse defines model for GetOrderItemsBuyerInfoResponse.
 type GetOrderItemsBuyerInfoResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors *ErrorList `json:"errors,omitempty"`
 
@@ -121,7 +113,6 @@ type GetOrderItemsBuyerInfoResponse struct {
 
 // GetOrderItemsResponse defines model for GetOrderItemsResponse.
 type GetOrderItemsResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors *ErrorList `json:"errors,omitempty"`
 
@@ -131,7 +122,6 @@ type GetOrderItemsResponse struct {
 
 // GetOrderResponse defines model for GetOrderResponse.
 type GetOrderResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors *ErrorList `json:"errors,omitempty"`
 
@@ -141,7 +131,6 @@ type GetOrderResponse struct {
 
 // GetOrdersResponse defines model for GetOrdersResponse.
 type GetOrdersResponse struct {
-
 	// A list of error responses returned when a request is unsuccessful.
 	Errors *ErrorList `json:"errors,omitempty"`
 
@@ -151,7 +140,6 @@ type GetOrdersResponse struct {
 
 // Money defines model for Money.
 type Money struct {
-
 	// The currency amount.
 	Amount *string `json:"Amount,omitempty"`
 
@@ -161,7 +149,6 @@ type Money struct {
 
 // Order defines model for Order.
 type Order struct {
-
 	// An Amazon-defined order identifier, in 3-7-7 format.
 	AmazonOrderId string `json:"AmazonOrderId"`
 
@@ -207,7 +194,7 @@ type Order struct {
 
 	// When true, this is a replacement order.
 	// TODO:https://github.com/amzn/selling-partner-api-docs/issues/278
-	IsReplacementOrder *string `json:"IsReplacementOrder,omitempty"`
+	IsReplacementOrder *bool `json:"IsReplacementOrder,omitempty"`
 
 	// When true, the item within this order was bought and re-sold by Amazon Business EU SARL (ABEU). By buying and instantly re-selling your items, ABEU becomes the seller of record, making your inventory available for sale to customers who would not otherwise purchase from a third-party seller.
 	IsSoldByAB *bool `json:"IsSoldByAB,omitempty"`
@@ -283,7 +270,6 @@ type Order struct {
 
 // OrderAddress defines model for OrderAddress.
 type OrderAddress struct {
-
 	// An Amazon-defined order identifier, in 3-7-7 format.
 	AmazonOrderId string `json:"AmazonOrderId"`
 
@@ -293,7 +279,6 @@ type OrderAddress struct {
 
 // OrderBuyerInfo defines model for OrderBuyerInfo.
 type OrderBuyerInfo struct {
-
 	// An Amazon-defined order identifier, in 3-7-7 format.
 	AmazonOrderId string `json:"AmazonOrderId"`
 
@@ -315,7 +300,6 @@ type OrderBuyerInfo struct {
 
 // OrderItem defines model for OrderItem.
 type OrderItem struct {
-
 	// The Amazon Standard Identification Number (ASIN) of the item.
 	ASIN string `json:"ASIN"`
 
@@ -421,7 +405,6 @@ type OrderItem struct {
 
 // OrderItemBuyerInfo defines model for OrderItemBuyerInfo.
 type OrderItemBuyerInfo struct {
-
 	// Buyer information for custom orders from the Amazon Custom program.
 	BuyerCustomizedInfo *BuyerCustomizedInfoDetail `json:"BuyerCustomizedInfo,omitempty"`
 
@@ -449,7 +432,6 @@ type OrderItemList []OrderItem
 
 // OrderItemsBuyerInfoList defines model for OrderItemsBuyerInfoList.
 type OrderItemsBuyerInfoList struct {
-
 	// An Amazon-defined order identifier, in 3-7-7 format.
 	AmazonOrderId string `json:"AmazonOrderId"`
 
@@ -462,7 +444,6 @@ type OrderItemsBuyerInfoList struct {
 
 // OrderItemsList defines model for OrderItemsList.
 type OrderItemsList struct {
-
 	// An Amazon-defined order identifier, in 3-7-7 format.
 	AmazonOrderId string `json:"AmazonOrderId"`
 
@@ -478,7 +459,6 @@ type OrderList []Order
 
 // OrdersList defines model for OrdersList.
 type OrdersList struct {
-
 	// A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format.
 	CreatedBefore *string `json:"CreatedBefore,omitempty"`
 
@@ -494,7 +474,6 @@ type OrdersList struct {
 
 // PaymentExecutionDetailItem defines model for PaymentExecutionDetailItem.
 type PaymentExecutionDetailItem struct {
-
 	// The monetary value of the order.
 	Payment Money `json:"Payment"`
 
@@ -518,7 +497,6 @@ type PaymentMethodDetailItemList []string
 
 // PointsGrantedDetail defines model for PointsGrantedDetail.
 type PointsGrantedDetail struct {
-
 	// The monetary value of the order.
 	PointsMonetaryValue *Money `json:"PointsMonetaryValue,omitempty"`
 
@@ -528,7 +506,6 @@ type PointsGrantedDetail struct {
 
 // ProductInfoDetail defines model for ProductInfoDetail.
 type ProductInfoDetail struct {
-
 	// The total number of items that are included in the ASIN.
 	// TODO:https://github.com/amzn/selling-partner-api-docs/issues/480
 	NumberOfItems *string `json:"NumberOfItems,omitempty"`
@@ -539,7 +516,6 @@ type PromotionIdList []string
 
 // TaxClassification defines model for TaxClassification.
 type TaxClassification struct {
-
 	// The type of tax.
 	Name *string `json:"Name,omitempty"`
 
@@ -549,7 +525,6 @@ type TaxClassification struct {
 
 // TaxCollection defines model for TaxCollection.
 type TaxCollection struct {
-
 	// The tax collection model applied to the item.
 	Model *string `json:"Model,omitempty"`
 
@@ -559,7 +534,6 @@ type TaxCollection struct {
 
 // GetOrdersParams defines parameters for GetOrders.
 type GetOrdersParams struct {
-
 	// A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format.
 	CreatedAfter *string `json:"CreatedAfter,omitempty"`
 
@@ -605,14 +579,12 @@ type GetOrdersParams struct {
 
 // GetOrderItemsParams defines parameters for GetOrderItems.
 type GetOrderItemsParams struct {
-
 	// A string token returned in the response of your previous request.
 	NextToken *string `json:"NextToken,omitempty"`
 }
 
 // GetOrderItemsBuyerInfoParams defines parameters for GetOrderItemsBuyerInfo.
 type GetOrderItemsBuyerInfoParams struct {
-
 	// A string token returned in the response of your previous request.
 	NextToken *string `json:"NextToken,omitempty"`
 }
