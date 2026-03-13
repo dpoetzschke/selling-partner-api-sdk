@@ -7,7 +7,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	runt "runtime"
@@ -972,7 +972,7 @@ func (c *ClientWithResponses) GetOrderItemsBuyerInfoWithResponse(ctx context.Con
 
 // ParseGetOrdersResp parses an HTTP response from a GetOrdersWithResponse call
 func ParseGetOrdersResp(rsp *http.Response) (*GetOrdersResp, error) {
-	bodyBytes, err := ioutil.ReadAll(rsp.Body)
+	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer rsp.Body.Close()
 	if err != nil {
 		return nil, err
@@ -999,7 +999,7 @@ func ParseGetOrdersResp(rsp *http.Response) (*GetOrdersResp, error) {
 
 // ParseGetOrderResp parses an HTTP response from a GetOrderWithResponse call
 func ParseGetOrderResp(rsp *http.Response) (*GetOrderResp, error) {
-	bodyBytes, err := ioutil.ReadAll(rsp.Body)
+	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer rsp.Body.Close()
 	if err != nil {
 		return nil, err
@@ -1026,7 +1026,7 @@ func ParseGetOrderResp(rsp *http.Response) (*GetOrderResp, error) {
 
 // ParseGetOrderAddressResp parses an HTTP response from a GetOrderAddressWithResponse call
 func ParseGetOrderAddressResp(rsp *http.Response) (*GetOrderAddressResp, error) {
-	bodyBytes, err := ioutil.ReadAll(rsp.Body)
+	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer rsp.Body.Close()
 	if err != nil {
 		return nil, err
@@ -1053,7 +1053,7 @@ func ParseGetOrderAddressResp(rsp *http.Response) (*GetOrderAddressResp, error) 
 
 // ParseGetOrderBuyerInfoResp parses an HTTP response from a GetOrderBuyerInfoWithResponse call
 func ParseGetOrderBuyerInfoResp(rsp *http.Response) (*GetOrderBuyerInfoResp, error) {
-	bodyBytes, err := ioutil.ReadAll(rsp.Body)
+	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer rsp.Body.Close()
 	if err != nil {
 		return nil, err
@@ -1080,7 +1080,7 @@ func ParseGetOrderBuyerInfoResp(rsp *http.Response) (*GetOrderBuyerInfoResp, err
 
 // ParseGetOrderItemsResp parses an HTTP response from a GetOrderItemsWithResponse call
 func ParseGetOrderItemsResp(rsp *http.Response) (*GetOrderItemsResp, error) {
-	bodyBytes, err := ioutil.ReadAll(rsp.Body)
+	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer rsp.Body.Close()
 	if err != nil {
 		return nil, err
@@ -1107,7 +1107,7 @@ func ParseGetOrderItemsResp(rsp *http.Response) (*GetOrderItemsResp, error) {
 
 // ParseGetOrderItemsBuyerInfoResp parses an HTTP response from a GetOrderItemsBuyerInfoWithResponse call
 func ParseGetOrderItemsBuyerInfoResp(rsp *http.Response) (*GetOrderItemsBuyerInfoResp, error) {
-	bodyBytes, err := ioutil.ReadAll(rsp.Body)
+	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer rsp.Body.Close()
 	if err != nil {
 		return nil, err
